@@ -1,0 +1,176 @@
+{
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Bali",
+      "country": "Indonesia",
+      "continent": "Asia",
+      "image": "assets/bali.jpg",
+      "description": "Bali is a tropical paradise known for its stunning beaches, ancient temples, and vibrant culture. The island offers a perfect blend of relaxation, adventure, and spiritual experiences with terraced rice fields and lush jungles.",
+      "attractions": ["Ubud Monkey Forest", "Bali Swing", "Mount Batur", "Tegallalang Rice Terraces", "Tanah Lot Temple", "Seminyak Beach"],
+      "costComparison": {
+        "budget": "$30-50",
+        "moderate": "$50-100",
+        "luxury": "$150+"
+      },
+      "travelType": ["relaxation", "cultural", "nature"],
+      "budgetRange": ["low", "medium"]
+    },
+    {
+      "id": 2,
+      "name": "Paris",
+      "country": "France",
+      "continent": "Europe",
+      "image": "assets/images/paris.jpg",
+      "description": "The City of Light is a timeless destination featuring world-class museums, iconic landmarks, and romantic atmosphere. Paris offers exquisite cuisine, charming cafés, and unparalleled art and architecture.",
+      "attractions": ["Eiffel Tower", "Louvre Museum", "Notre-Dame", "Arc de Triomphe", "Montmartre", "Champs-Élysées"],
+      "costComparison": {
+        "budget": "$50-80",
+        "moderate": "$100-200",
+        "luxury": "$300+"
+      },
+      "travelType": ["cultural", "relaxation"],
+      "budgetRange": ["medium", "high"]
+    },
+    {
+      "id": 3,
+      "name": "Tokyo",
+      "country": "Japan",
+      "continent": "Asia",
+      "image": "assets/images/tokyo.jpg",
+      "description": "Tokyo is a vibrant metropolis blending ancient traditions with cutting-edge technology. Experience neon-lit streets, zen temples, anime culture, and exceptional street food in this electrifying city.",
+      "attractions": ["Senso-ji Temple", "Shibuya Crossing", "Meiji Shrine", "Tokyo Tower", "Akihabara", "Tsukiji Outer Market"],
+      "costComparison": {
+        "budget": "$40-70",
+        "moderate": "$80-150",
+        "luxury": "$200+"
+      },
+      "travelType": ["cultural", "adventure"],
+      "budgetRange": ["low", "medium"]
+    },
+    {
+      "id": 4,
+      "name": "New Zealand",
+      "country": "New Zealand",
+      "continent": "Oceania",
+      "image": "assets/images/new zeland.jpg",
+      "description": "New Zealand offers dramatic landscapes with mountains, fjords, and pristine lakes. It's an adventure seeker's paradise with activities like bungee jumping, hiking, and exploring Middle-earth film locations.",
+      "attractions": ["Milford Sound", "Tongariro Alpine Crossing", "Hobbiton", "Rotorua Geysers", "Lake Tekapo", "Abel Tasman Park"],
+      "costComparison": {
+        "budget": "$50-80",
+        "moderate": "$100-180",
+        "luxury": "$250+"
+      },
+      "travelType": ["adventure", "nature"],
+      "budgetRange": ["medium", "high"]
+    },
+    {
+      "id": 5,
+      "name": "Barcelona",
+      "country": "Spain",
+      "continent": "Europe",
+      "image": "assets/images/Barcelona.jpg",
+      "description": "Barcelona is a vibrant Mediterranean city known for its modernist architecture, beautiful beaches, and passionate culture. Explore Gaudí's masterpieces, enjoy tapas, and experience the lively nightlife.",
+      "attractions": ["Sagrada Família", "Park Güell", "Gothic Quarter", "Las Ramblas", "Montjuïc", "Barcelona Beach"],
+      "costComparison": {
+        "budget": "$35-60",
+        "moderate": "$70-130",
+        "luxury": "$200+"
+      },
+      "travelType": ["cultural", "relaxation"],
+      "budgetRange": ["low", "medium"]
+    },
+    {
+      "id": 6,
+      "name": "Thailand",
+      "country": "Thailand",
+      "continent": "Asia",
+      "image": "assets/images/thailnd.jpg",
+      "description": "Thailand captivates visitors with its ornate temples, tropical beaches, and warm hospitality. From bustling Bangkok to serene islands, experience incredible food, elephant sanctuaries, and island hopping.",
+      "attractions": ["Grand Palace", "Floating Markets", "Phi Phi Islands", "Phuket", "Chiang Mai", "James Bond Island"],
+      "costComparison": {
+        "budget": "$25-40",
+        "moderate": "$50-100",
+        "luxury": "$150+"
+      },
+      "travelType": ["relaxation", "cultural", "adventure"],
+      "budgetRange": ["low", "medium"]
+    },
+    {
+      "id": 7,
+      "name": "Iceland",
+      "country": "Iceland",
+      "continent": "Europe",
+      "image": "assets/images/iceland.jpg",
+      "description": "Iceland is a land of fire and ice with dramatic waterfalls, black sand beaches, and otherworldly landscapes. Explore the Golden Circle, relax in geothermal hot springs, and chase the Northern Lights.",
+      "attractions": ["Golden Circle", "Blue Lagoon", "Jökulsárlón Glacier Lake", "Skógafoss Waterfall", "Mývatn Lake", "Reykjavik"],
+      "costComparison": {
+        "budget": "$60-90",
+        "moderate": "$120-200",
+        "luxury": "$300+"
+      },
+      "travelType": ["nature", "adventure"],
+      "budgetRange": ["medium", "high"]
+    },
+    {
+      "id": 8,
+      "name": "Morocco",
+      "country": "Morocco",
+      "continent": "Africa",
+      "image": "assets/images/morocco.jpg",
+      "description": "Morocco offers a mesmerizing blend of Berber culture, stunning deserts, and medieval medinas. Wander through colorful souks, trek the Atlas Mountains, and experience authentic hospitality.",
+      "attractions": ["Fes Medina", "Sahara Desert", "Atlas Mountains", "Marrakech", "Blue City of Chefchaouen", "Casablanca Hassan II Mosque"],
+      "costComparison": {
+        "budget": "$20-35",
+        "moderate": "$40-80",
+        "luxury": "$120+"
+      },
+      "travelType": ["cultural", "nature", "adventure"],
+      "budgetRange": ["low", "medium"]
+    },
+    {
+      "id": 9,
+      "name": "Costa Rica",
+      "country": "Costa Rica",
+      "continent": "Americas",
+      "image": "assets/images/Costa Rica.jpg",
+      "description": "Costa Rica is a tropical eco-paradise with rainforests, volcanoes, and biodiversity. Perfect for zip-lining, wildlife spotting, and beach relaxation with a commitment to sustainability.",
+      "attractions": ["Arenal Volcano", "Monteverde Cloud Forest", "Manuel Antonio", "Tortuguero", "Arenal Hot Springs", "Corcovado National Park"],
+      "costComparison": {
+        "budget": "$40-60",
+        "moderate": "$80-150",
+        "luxury": "$200+"
+      },
+      "travelType": ["adventure", "nature", "relaxation"],
+      "budgetRange": ["medium", "high"]
+    },
+    {
+      "id": 10,
+      "name": "Egypt",
+      "country": "Egypt",
+      "continent": "Africa",
+      "image": "assets/images/Egypt.jpg",
+      "description": "Egypt is home to ancient wonders and modern charm. Visit the pyramids, cruise the Nile, explore temples, and experience the rich history spanning thousands of years.",
+      "attractions": ["Great Pyramids of Giza", "Sphinx", "Egyptian Museum", "Nile River Cruise", "Luxor Temples", "Valley of the Kings"],
+      "costComparison": {
+        "budget": "$30-50",
+        "moderate": "$70-120",
+        "luxury": "$180+"
+      },
+      "travelType": ["cultural", "adventure"],
+      "budgetRange": ["low", "medium"]
+    }
+  ],
+  "quotes": [
+    "Travel is the only thing you buy that makes you richer.",
+    "Adventure is worthwhile in itself.",
+    "To travel is to live.",
+    "The world is a book, and those who do not travel read only one page.",
+    "Travel makes one modest. You see what an enormous place the world is.",
+    "We travel not to escape life, but for life not to escape us.",
+    "Traveling is a brutality. It forces you to trust strangers and lose the coziness of your home.",
+    "Once a year, go someplace you've never been before.",
+    "Wherever you go becomes a part of you somehow.",
+    "Travel is freedom. It is instruction without it being told."
+  ]
+}

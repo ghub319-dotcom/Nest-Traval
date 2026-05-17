@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get random travel destination suggestions based on your preferences with TravelNest's surprise trip generator.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <title>Random Trip Generator - TravelNest</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="navbar">
+      <div class="logo">
+        <span class="logo-icon">✈️</span>
+        <span>TravelNest</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Explore</a></li>
+        <li><a href="budget-planner.html">Budget</a></li>
+        <li><a href="random-trip.html">Surprise Me</a></li>
+        <li><a href="travel-mood.html">Mood</a></li>
+        <li><a href="feedback.html">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="container">
+        <div class="hero-content" style="text-align: center; width: 100%;">
+          <h1>🎲 Random Trip Generator</h1>
+          <p class="hero-copy">Not sure where to go? Let us surprise you!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preferences Section -->
+  <section class="section">
+    <div class="container">
+      <div style="max-width: 700px; margin: 0 auto; background: white; padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow);">
+        <h2 style="text-align: center; margin-bottom: 1.5rem;">Tell Us Your Travel Preferences</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem;">We'll surprise you with a perfect destination based on your mood!</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="travel-type" style="font-size: 1rem; font-weight: 600;">🎯 Travel Type *</label>
+            <select id="travel-type" style="margin-top: 0.5rem;">
+              <option value="">Select travel type...</option>
+              <option value="adventure">🏃 Adventure</option>
+              <option value="relaxation">🏖️ Relaxation</option>
+              <option value="cultural">🏛️ Cultural</option>
+              <option value="nature">🌿 Nature</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="budget-range" style="font-size: 1rem; font-weight: 600;">💰 Budget Range *</label>
+            <select id="budget-range" style="margin-top: 0.5rem;">
+              <option value="">Select budget...</option>
+              <option value="low">💰 Budget-Friendly</option>
+              <option value="medium">💵 Comfortable</option>
+              <option value="high">💎 Luxury</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-block" onclick="generateRandomTrip()" style="margin-top: 2rem; padding: 0.8rem; font-size: 1rem;">🎲 Surprise Me! Give Me a Random Destination</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Section -->
+  <section class="section" id="results-section" style="display: none;">
+    <div class="container">
+      <!-- Main Destination Card -->
+      <div style="max-width: 900px; margin: 0 auto; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 2rem; border-radius: var(--border-radius); box-shadow: 0 15px 40px rgba(255, 107, 107, 0.2); margin-bottom: 2rem; text-align: center;">
+        <div style="font-size: 4rem; margin-bottom: 1rem;" id="result-emoji">✈️</div>
+        <h2 id="result-name" style="color: white; margin: 0 0 0.5rem;">Destination</h2>
+        <p id="result-country" style="font-size: 1.1rem; opacity: 0.95; margin-bottom: 1.5rem;">Country</p>
+        <p id="result-description" style="max-width: 700px; margin: 0 auto; line-height: 1.8; opacity: 0.95;"></p>
+      </div>
+
+      <!-- Summary Cards -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <div style="background: white; padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow); text-align: center;">
+          <p style="color: #999; font-size: 0.9rem; margin-bottom: 0.5rem;">Perfect For</p>
+          <h3 id="result-travel-types" style="color: var(--primary-color); margin: 0; font-size: 1rem;">-</h3>
+        </div>
+        <div style="background: white; padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow); text-align: center;">
+          <p style="color: #999; font-size: 0.9rem; margin-bottom: 0.5rem;">Budget Level</p>
+          <h3 id="result-budget-levels" style="color: var(--primary-color); margin: 0; font-size: 1rem;">-</h3>
+        </div>
+        <div style="background: white; padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow); text-align: center;">
+          <p style="color: #999; font-size: 0.9rem; margin-bottom: 0.5rem;">Match Score</p>
+          <h3 id="result-match-score" style="color: var(--primary-color); margin: 0; font-size: 1rem;">100%</h3>
+        </div>
+      </div>
+
+      <!-- Attractions Section -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <div style="background: white; padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow);">
+          <h3 style="margin-top: 0; color: var(--primary-color);">🎯 Popular Attractions</h3>
+          <ul id="result-attractions" style="margin: 1rem 0 0 1.5rem; padding: 0;">
+            <!-- Populated by JavaScript -->
+          </ul>
+        </div>
+        <div style="background: white; padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow);">
+          <h3 style="margin-top: 0; color: var(--primary-color);">💰 Daily Budget Guide</h3>
+          <div id="result-costs" style="margin: 1rem 0;">
+            <!-- Populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div style="max-width: 900px; margin: 0 auto; margin-bottom: 2rem;">
+        <div style="background: white; padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow); display: flex; gap: 1rem; flex-wrap: wrap;">
+          <button class="btn btn-primary" onclick="addToWishlist()" style="flex: 1; min-width: 150px;">❤️ Add to Wishlist</button>
+          <button class="btn btn-secondary" onclick="generateRandomTrip()" style="flex: 1; min-width: 150px;">🎲 Surprise Me Again</button>
+          <button class="btn btn-outline" onclick="visitDestination()" style="flex: 1; min-width: 150px;">📍 View Details</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wishlist Section -->
+    <div class="container">
+      <div style="max-width: 900px; margin: 0 auto; background: white; padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow);">
+        <h3 style="color: var(--primary-color); margin-top: 0;">❤️ My Travel Wishlist</h3>
+        <p style="color: #666; margin-bottom: 1.5rem;">Keep track of destinations you'd love to visit</p>
+        <div id="wishlist-items" style="display: grid; gap: 1rem;">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>TravelNest</h3>
+        <p>Making travel planning easy, enjoyable, and stress-free for everyone.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="budget-planner.html">Budget Planner</a></li>
+          <li><a href="feedback.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <p>Subscribe to get travel tips and destination updates!</p>
+        <div class="newsletter-form">
+          <input type="email" id="newsletter-email" placeholder="Your email" required>
+          <button class="btn btn-primary" onclick="subscribeNewsletter()">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 TravelNest. All rights reserved. | Made with ❤️ for travelers</p>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/random-trip.js"></script>
+</body>
+</html>

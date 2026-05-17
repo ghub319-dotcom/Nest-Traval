@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TravelNest - Plan your perfect trip with ease. Explore destinations, create budgets, and discover travel inspiration.">
+  <meta name="theme-color" content="#FF6B6B">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+  <title>TravelNest - Your Travel Planning Companion</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="navbar">
+      <div class="logo">
+        <span class="logo-icon">✈️</span>
+        <span>TravelNest</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Explore</a></li>
+        <li><a href="budget-planner.html">Budget</a></li>
+        <li><a href="random-trip.html">Surprise Me</a></li>
+        <li><a href="travel-mood.html">Mood</a></li>
+        <li><a href="feedback.html">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+<section class="hero">
+  <div class="hero-overlay">
+    <div class="container">
+      <div class="hero-grid fade-in">
+        <div class="hero-text">
+          <span class="hero-eyebrow">Travel planning made simple</span>
+          <h1>Discover Your Next Adventure</h1>
+          <p id="quote" class="hero-quote">
+            Travel is the only thing you buy that makes you richer.
+          </p>
+          <p class="hero-copy">
+            Explore breathtaking destinations, plan unforgettable trips, and manage your travel budget all in one place.
+          </p>
+          <div class="hero-actions">
+            <a href="destinations.html" class="btn btn-primary">Start Exploring</a>
+            <a href="budget-planner.html" class="btn btn-outline">Plan a Trip</a>
+          </div>
+        </div>
+        <div class="hero-visual" id="hero-visual">
+          <div class="hero-visual-card">
+            <div class="hero-visual-tag">Today's Highlight</div>
+            <div class="hero-visual-image" id="hero-visual-image">✈️</div>
+            <div class="hero-visual-body">
+              <h2 id="hero-visual-name">Bali</h2>
+              <p id="hero-visual-country">Indonesia</p>
+              <p id="hero-visual-description">A tropical paradise waiting for your next escape.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Featured Photos -->
+  <section class="section home-gallery-section">
+    <div class="container">
+      <h2 style="text-align: center;">Featured Travel Moments</h2>
+      <p style="text-align: center; max-width: 760px; margin: 1rem auto 2rem; color: var(--text-color); opacity: 0.9;">
+        See what inspires our travelers with real destinations captured in vibrant moments.
+      </p>
+      <div class="grid grid-2 home-gallery-grid">
+        <div class="card">
+          <img class="card-image" src="assets/TRAVAL_WORLD.jpg" alt="Travel world destinations">
+          <h3 class="card-title">Travel World</h3>
+          <p class="card-text">Explore the most breathtaking destinations around the world and inspire your next adventure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- More to Explore Section -->
+  <section class="section" style="padding-top: 3rem; padding-bottom: 3rem;">
+    <div class="container">
+      <h2 style="text-align: center;">More to Explore</h2>
+      <p style="text-align: center; max-width: 760px; margin: 1rem auto 2rem; color: var(--text-color); opacity: 0.9;">
+        Discover curated travel ideas, from scenic escapes to cultural adventures and bucket-list city breaks. Tap into the destination explorer for more inspiration.
+      </p>
+      <div class="grid grid-3">
+        <div class="card">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🏖️</div>
+          <h3>Beach Escapes</h3>
+          <p>Find sunny shores, tropical retreats, and coastal getaways perfect for rest, fun, and seaside exploration.</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🏙️</div>
+          <h3>City Adventures</h3>
+          <p>Explore vibrant city destinations with iconic landmarks, local cuisine, and unforgettable cultural experiences.</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🌍</div>
+          <h3>Cultural Journeys</h3>
+          <p>Discover destinations rich in history, traditions, and immersive experiences for every kind of traveler.</p>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="destinations.html" class="btn btn-primary">Browse All Destinations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destination of the Day -->
+  <section class="section section-highlight">
+    <div class="container">
+      <h2 style="text-align: center;">✨ Destination of the Day</h2>
+      <div class="dest-of-day-grid">
+        <div class="dest-of-day-copy">
+          <h3 id="dotd-name">Loading...</h3>
+          <p id="dotd-country" style="font-size: 1.1rem; opacity: 0.9;">Country</p>
+          <p id="dotd-desc" style="margin: 1.5rem 0; line-height: 1.8; max-width: 600px;">Discover amazing experiences...</p>
+          <a href="destinations.html" class="btn">Learn More</a>
+        </div>
+        <div class="dest-of-day-image" id="dotd-image">🏝️</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section">
+    <div class="container">
+      <h2 style="text-align: center;">Why Choose TravelNest?</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🔍</div>
+          <h3>Explore Destinations</h3>
+          <p>Discover 10+ carefully curated destinations from around the world with detailed information, attractions, and cost comparisons.</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">💰</div>
+          <h3>Smart Budget Planning</h3>
+          <p>Calculate your trip costs instantly with our intelligent budget planner. Get status indicators for budget levels and save your plans.</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🎲</div>
+          <h3>Random Trip Generator</h3>
+          <p>Not sure where to go? Let our algorithm surprise you with personalized destination suggestions based on your preferences.</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🎧</div>
+          <h3>Travel Mood Curator</h3>
+          <p>Set the mood with ambient sounds and track your travel aspirations. Mark destinations as visited or planned for your bucket list.</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">💾</div>
+          <h3>Cloud Sync Ready</h3>
+          <p>Your data is automatically saved locally. Access your wishlists, budgets, and preferences anytime, anywhere.</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">📱</div>
+          <h3>Mobile Friendly</h3>
+          <p>Fully responsive design works seamlessly on mobile, tablet, and desktop. Plan your trips on the go.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" style="background: var(--light-color); text-align: center;">
+    <div class="container">
+      <h2>Ready to Start Your Journey?</h2>
+      <p style="font-size: 1.1rem; margin-bottom: 2rem;">Choose your path and begin planning your dream trip today!</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="destinations.html" class="btn btn-primary">Browse All Destinations</a>
+        <a href="random-trip.html" class="btn btn-secondary">Get Random Suggestion</a>
+        <a href="travel-mood.html" class="btn btn-outline">Explore Travel Moods</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>TravelNest</h3>
+        <p>Making travel planning easy, enjoyable, and stress-free for everyone.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="budget-planner.html">Budget Planner</a></li>
+          <li><a href="feedback.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <p>Subscribe to get travel tips and destination updates!</p>
+        <div class="newsletter-form">
+          <input type="email" id="newsletter-email" placeholder="Your email" required>
+          <button class="btn btn-primary" onclick="subscribeNewsletter()">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 TravelNest. All rights reserved. | Made with ❤️ for travelers</p>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

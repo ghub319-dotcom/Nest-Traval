@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore destinations on TravelNest. Filter by continent, search, and view detailed information about travel destinations worldwide.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <title>Explore Destinations - TravelNest</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="navbar">
+      <div class="logo">
+        <span class="logo-icon">✈️</span>
+        <span>TravelNest</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Explore</a></li>
+        <li><a href="budget-planner.html">Budget</a></li>
+        <li><a href="random-trip.html">Surprise Me</a></li>
+        <li><a href="travel-mood.html">Mood</a></li>
+        <li><a href="feedback.html">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="container">
+        <div class="hero-content" style="text-align: center; width: 100%;">
+          <h1>Explore World Destinations</h1>
+          <p class="hero-copy">Discover 10+ amazing destinations with detailed information and travel guides</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters Section -->
+  <section class="section" style="background: white; border-bottom: 2px solid var(--light-color);">
+    <div class="container">
+      <h2 style="margin-bottom: 1.5rem; text-align: center;">Search and Filter Destinations</h2>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+        <div class="form-group">
+          <label for="continent-filter">Filter by Continent:</label>
+          <select id="continent-filter">
+            <option value="">All Continents</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Africa">Africa</option>
+            <option value="Americas">Americas</option>
+            <option value="Oceania">Oceania</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="search-destination">Search by Name:</label>
+          <input type="text" id="search-destination" placeholder="Search destinations...">
+        </div>
+      </div>
+      <p style="text-align: center; color: #999;" id="results-count">Showing 10 destinations</p>
+    </div>
+  </section>
+
+  <!-- Destinations Grid -->
+  <section class="section">
+    <div class="container">
+      <h2 style="margin-bottom: 1.5rem; text-align: center;">Top Destinations</h2>
+      <div class="grid grid-3" id="destinations-grid">
+        <!-- Populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Destination Modal -->
+  <div id="destination-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modal-destination-name">Destination</h2>
+        <button class="close-btn" onclick="closeModal()">&times;</button>
+      </div>
+      <div>
+        <p><strong>Country:</strong> <span id="modal-country"></span></p>
+        <p><strong>Continent:</strong> <span id="modal-continent"></span></p>
+        <div class="divider"></div>
+        <h3>Description</h3>
+        <p id="modal-description"></p>
+        <h3 style="margin-top: 2rem;">Popular Attractions</h3>
+        <ul id="modal-attractions" style="margin-left: 1.5rem;">
+          <!-- Populated by JavaScript -->
+        </ul>
+        <h3 style="margin-top: 2rem;">Travel Cost Comparison</h3>
+        <table id="modal-costs">
+          <!-- Populated by JavaScript -->
+        </table>
+        <div style="text-align: center; margin-top: 2rem;">
+          <button class="btn btn-primary" onclick="closeModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>TravelNest</h3>
+        <p>Making travel planning easy, enjoyable, and stress-free for everyone.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="budget-planner.html">Budget Planner</a></li>
+          <li><a href="feedback.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <p>Subscribe to get travel tips and destination updates!</p>
+        <div class="newsletter-form">
+          <input type="email" id="newsletter-email" placeholder="Your email" required>
+          <button class="btn btn-primary" onclick="subscribeNewsletter()">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 TravelNest. All rights reserved. | Made with ❤️ for travelers</p>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/destinations.js"></script>
+</body>
+</html>

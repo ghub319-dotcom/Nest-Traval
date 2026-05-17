@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact TravelNest support team and explore frequently asked questions about our travel planning platform.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <title>Feedback & Support - TravelNest</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .accordion-item {
+      background: white;
+      border: 2px solid var(--light-color);
+      border-radius: var(--border-radius);
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .accordion-header {
+      padding: 1.5rem;
+      cursor: pointer;
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: var(--transition);
+      font-weight: 600;
+      color: var(--dark-color);
+    }
+
+    .accordion-header:hover {
+      background: var(--light-color);
+    }
+
+    .accordion-header.active {
+      background: var(--primary-color);
+      color: white;
+    }
+
+    .accordion-toggle {
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-header.active .accordion-toggle {
+      transform: rotate(180deg);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background: var(--light-color);
+    }
+
+    .accordion-content.active {
+      max-height: 500px;
+      padding: 1.5rem;
+    }
+
+    .accordion-content p {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="navbar">
+      <div class="logo">
+        <span class="logo-icon">✈️</span>
+        <span>TravelNest</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Explore</a></li>
+        <li><a href="budget-planner.html">Budget</a></li>
+        <li><a href="random-trip.html">Surprise Me</a></li>
+        <li><a href="travel-mood.html">Mood</a></li>
+        <li><a href="feedback.html">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="container">
+        <div class="hero-content" style="text-align: center; width: 100%;">
+          <h1>📞 Feedback & Support</h1>
+          <p class="hero-copy">We'd love to hear from you! Send us your feedback or get answers to common questions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="section">
+    <div class="container">
+      <div style="max-width: 600px; margin: 0 auto;">
+        <div style="background: white; padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow); margin-bottom: 3rem;">
+          <h2 style="text-align: center; margin-bottom: 2rem;">Get in Touch</h2>
+
+          <form id="feedback-form">
+            <div class="form-group">
+              <label for="contact-name">Full Name *</label>
+              <input type="text" id="contact-name" placeholder="Enter your name" required>
+              <div class="error" id="error-name"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email">Email Address *</label>
+              <input type="email" id="contact-email" placeholder="Enter your email" required>
+              <div class="error" id="error-email"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject">Subject *</label>
+              <select id="contact-subject" required>
+                <option value="">Select a subject...</option>
+                <option value="bug">Bug Report</option>
+                <option value="feature">Feature Request</option>
+                <option value="feedback">General Feedback</option>
+                <option value="question">Question</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Message *</label>
+              <textarea id="contact-message" placeholder="Tell us your thoughts..." required></textarea>
+              <div class="error" id="error-message"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          </form>
+
+          <div id="feedback-success" style="display: none; background: #d4edda; border: 1px solid #c3e6cb; padding: 1.5rem; border-radius: var(--border-radius); margin-top: 1rem;">
+            <h3 style="color: #155724; margin-bottom: 0.5rem;">✅ Thank You!</h3>
+            <p style="color: #155724;">Your feedback has been received and we appreciate you reaching out. We'll get back to you as soon as possible!</p>
+          </div>
+        </div>
+
+        <div style="background: white; padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow); margin-bottom: 3rem;">
+          <h2 style="text-align: center; margin-bottom: 1.5rem;">📍 Visit Us</h2>
+          <p style="text-align: center; margin-bottom: 1.5rem; color: #555;">Find our location on the map below, or tap the link to open Google Maps.</p>
+          <div style="width: 100%; height: 0; padding-bottom: 56.25%; position: relative; overflow: hidden; border-radius: var(--border-radius);">
+            <iframe
+              src="https://www.google.com/maps?q=8n15MfG7Mm1jkqdK6&z=15&output=embed"
+              style="border:0; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <img src="assets/family.jpg" alt="Family travel" style="width: 100%; height: auto; border-radius: var(--border-radius); margin-top: 1.5rem; box-shadow: var(--shadow);">
+          <p style="text-align: center; margin-top: 1rem;"><a href="https://maps.app.goo.gl/8n15MfG7Mm1jkqdK6" target="_blank" rel="noopener noreferrer">Open in Google Maps</a></p>
+        </div>
+
+        <!-- FAQ Section -->
+        <div style="background: white; padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow);">
+          <h2 style="text-align: center; margin-bottom: 2rem;">❓ Frequently Asked Questions</h2>
+
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <span>What destinations are available on TravelNest?</span>
+              <span class="accordion-toggle">▼</span>
+            </div>
+            <div class="accordion-content">
+              <p>TravelNest currently features 10 handpicked destinations from around the world, including Bali, Paris, Tokyo, New Zealand, Barcelona, Thailand, Iceland, Morocco, Costa Rica, and Egypt. Each destination comes with detailed information about attractions, costs, and travel tips.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <span>How does the Budget Planner work?</span>
+              <span class="accordion-toggle">▼</span>
+            </div>
+            <div class="accordion-content">
+              <p>The Budget Planner is simple to use: 1) Select your destination, 2) Enter the number of days, 3) Input your daily budget. Our tool will instantly calculate your total trip cost and provide a budget status (budget-friendly, moderate, or luxury). You can save your calculated budgets for future reference.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <span>Can I save my preferences and data?</span>
+              <span class="accordion-toggle">▼</span>
+            </div>
+            <div class="accordion-content">
+              <p>Yes! TravelNest uses localStorage to save all your data locally on your device. This includes your wishlist, saved budgets, visited destinations, planned trips, and newsletter subscriptions. Your data is secure and accessible whenever you visit the site.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <span>How does the Random Trip Generator work?</span>
+              <span class="accordion-toggle">▼</span>
+            </div>
+            <div class="accordion-content">
+              <p>The Random Trip Generator uses your preferences (travel type and budget range) to suggest destinations that match your criteria. Select your preferred travel style (adventure, relaxation, cultural, or nature) and budget level (low, medium, or high), then let our algorithm surprise you with a personalized suggestion!</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <span>Is TravelNest available on mobile devices?</span>
+              <span class="accordion-toggle">▼</span>
+            </div>
+            <div class="accordion-content">
+              <p>Absolutely! TravelNest is fully responsive and works seamlessly on mobile phones, tablets, and desktop computers. We've optimized the design for all screen sizes, making it easy to plan your trips on the go.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <span>What about the Travel Mood feature?</span>
+              <span class="accordion-toggle">▼</span>
+            </div>
+            <div class="accordion-content">
+              <p>The Travel Mood Curator allows you to immerse yourself in travel vibes with ambient sounds from different environments (beach, forest, city). You can also track your travel aspirations by marking destinations as visited or planned, maintaining a personal travel journal and bucket list.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <span>Is there a newsletter subscription?</span>
+              <span class="accordion-toggle">▼</span>
+            </div>
+            <div class="accordion-content">
+              <p>Yes! You can subscribe to our newsletter from the footer of any page. We share travel tips, destination highlights, budget hacks, and exclusive travel inspiration. Your email is stored securely and we never spam.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <span>Can I filter destinations by continent?</span>
+              <span class="accordion-toggle">▼</span>
+            </div>
+            <div class="accordion-content">
+              <p>Yes! On the Destination Explorer page, you can filter destinations by continent (Asia, Europe, Africa, Americas, Oceania) or search by destination name. This makes it easy to find destinations in your preferred region.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <span>How is my data protected?</span>
+              <span class="accordion-toggle">▼</span>
+            </div>
+            <div class="accordion-content">
+              <p>All your personal data is stored locally on your device using browser localStorage. No information is sent to external servers. Your data remains completely private and under your control. You can clear your data anytime through your browser settings.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>TravelNest</h3>
+        <p>Making travel planning easy, enjoyable, and stress-free for everyone.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="budget-planner.html">Budget Planner</a></li>
+          <li><a href="feedback.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <p>Subscribe to get travel tips and destination updates!</p>
+        <div class="newsletter-form">
+          <input type="email" id="newsletter-email" placeholder="Your email" required>
+          <button class="btn btn-primary" onclick="subscribeNewsletter()">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 TravelNest. All rights reserved. | Made with ❤️ for travelers</p>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/feedback.js"></script>
+</body>
+</html>

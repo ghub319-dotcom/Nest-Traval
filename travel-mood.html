@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Set your travel mood with ambient sounds and track your travel aspirations on TravelNest.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <title>Travel Mood - TravelNest</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="navbar">
+      <div class="logo">
+        <span class="logo-icon">✈️</span>
+        <span>TravelNest</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Explore</a></li>
+        <li><a href="budget-planner.html">Budget</a></li>
+        <li><a href="random-trip.html">Surprise Me</a></li>
+        <li><a href="travel-mood.html">Mood</a></li>
+        <li><a href="feedback.html">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="container">
+        <div class="hero-content" style="text-align: center; width: 100%;">
+          <h1>🎧 Travel Mood Curator</h1>
+          <p class="hero-copy">Set the mood and track your travel aspirations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ambient Sounds Section -->
+  <section class="section">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 3rem;">🎵 Ambient Travel Sounds</h2>
+      <div class="grid grid-3" style="margin-bottom: 3rem;">
+        <div class="card" style="text-align: center; cursor: pointer;">
+          <img src="assets/Beach Waves.jpg" alt="Beach Waves" style="width: 100%; height: auto; border-radius: 12px; margin-bottom: 1rem; object-fit: cover;">
+          <div style="font-size: 4rem; margin-bottom: 1rem;">🏖️</div>
+          <h3>Beach Waves</h3>
+          <p>Relaxing ocean sounds</p>
+          <button class="btn btn-primary" data-sound="beach" onclick="toggleSound('beach', this)">
+            <span class="sound-label">Play Sound</span>
+          </button>
+        </div>
+
+        <div class="card" style="text-align: center; cursor: pointer;">
+          <img src="assets/Forest Forest.jpg" alt="Forest Forest" style="width: 100%; height: auto; border-radius: 12px; margin-bottom: 1rem; object-fit: cover;">
+          <div style="font-size: 4rem; margin-bottom: 1rem;">🌲</div>
+          <h3>Forest Forest</h3>
+          <p>Peaceful nature sounds</p>
+          <button class="btn btn-primary" data-sound="forest" onclick="toggleSound('forest', this)">
+            <span class="sound-label">Play Sound</span>
+          </button>
+        </div>
+
+        <div class="card" style="text-align: center; cursor: pointer;">
+          <img src="assets/City Vibes.jpg" alt="City Vibes" style="width: 100%; height: auto; border-radius: 12px; margin-bottom: 1rem; object-fit: cover;">
+          <div style="font-size: 4rem; margin-bottom: 1rem;">🌃</div>
+          <h3>City Vibes</h3>
+          <p>Urban ambient sounds</p>
+          <button class="btn btn-primary" data-sound="city" onclick="toggleSound('city', this)">
+            <span class="sound-label">Play Sound</span>
+          </button>
+        </div>
+
+        <div class="card" style="text-align: center; cursor: pointer;">
+          <img src="assets/rain.jpg" alt="Rainy Nights" style="width: 100%; height: auto; border-radius: 12px; margin-bottom: 1rem; object-fit: cover;">
+          <div style="font-size: 4rem; margin-bottom: 1rem;">🌧️</div>
+          <h3>Rainy Nights</h3>
+          <p>Soothing rain ambience</p>
+          <button class="btn btn-primary" data-sound="rain" onclick="toggleSound('rain', this)">
+            <span class="sound-label">Play Sound</span>
+          </button>
+        </div>
+
+        <div class="card" style="text-align: center; cursor: pointer;">
+          <img src="assets/Café Chatter.jpg" alt="Café Chatter" style="width: 100%; height: auto; border-radius: 12px; margin-bottom: 1rem; object-fit: cover;">
+          <div style="font-size: 4rem; margin-bottom: 1rem;">☕</div>
+          <h3>Café Chatter</h3>
+          <p>Cozy coffee shop music</p>
+          <button class="btn btn-primary" data-sound="cafe" onclick="toggleSound('cafe', this)">
+            <span class="sound-label">Play Sound</span>
+          </button>
+        </div>
+
+        <div class="card" style="text-align: center; cursor: pointer;">
+          <img src="assets/Hill Retreat.jpg" alt="Hill Retreat" style="width: 100%; height: auto; border-radius: 12px; margin-bottom: 1rem; object-fit: cover;">
+          <div style="font-size: 4rem; margin-bottom: 1rem;">⛰️</div>
+          <h3>Hill Retreat</h3>
+          <p>Gentle hill breeze ambience</p>
+          <button class="btn btn-primary" data-sound="hill" onclick="toggleSound('hill', this)">
+            <span class="sound-label">Play Sound</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel Status Section -->
+  <section class="section" style="background: var(--light-color);">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 3rem;">📍 Track Your Travel Status</h2>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div style="background: white; padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow); margin-bottom: 2rem;">
+          <h3>Mark Destination Status</h3>
+          <div class="form-group">
+            <label for="destination-status">Select a Destination:</label>
+            <select id="destination-status">
+              <option value="">Choose a destination...</option>
+              <option value="Bali">Bali, Indonesia</option>
+              <option value="Paris">Paris, France</option>
+              <option value="Tokyo">Tokyo, Japan</option>
+              <option value="New Zealand">New Zealand</option>
+              <option value="Barcelona">Barcelona, Spain</option>
+              <option value="Thailand">Thailand</option>
+              <option value="Iceland">Iceland</option>
+              <option value="Morocco">Morocco</option>
+              <option value="Costa Rica">Costa Rica</option>
+              <option value="Egypt">Egypt</option>
+            </select>
+          </div>
+
+          <div style="display: flex; gap: 1rem;">
+            <button class="btn btn-secondary" onclick="markAsPlanned()">📋 Mark as Planned</button>
+            <button class="btn btn-primary" onclick="markAsVisited()">✅ Mark as Visited</button>
+          </div>
+        </div>
+
+        <div style="background: white; padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow); margin-bottom: 2rem;">
+          <h3>✅ Visited Destinations</h3>
+          <div id="visited-list" style="margin-top: 1rem;">
+            <p style="color: #999;">No destinations visited yet. Start your journey!</p>
+          </div>
+        </div>
+
+        <div style="background: white; padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow);">
+          <h3>📋 Planned Destinations</h3>
+          <div id="planned-list" style="margin-top: 1rem;">
+            <p style="color: #999;">No destinations planned yet. Add some to your bucket list!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel Stats Section -->
+  <section class="section">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 2rem;">📊 Your Travel Statistics</h2>
+      <div class="grid grid-2">
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;">🎯</div>
+          <h3>Visited Destinations</h3>
+          <p style="font-size: 2rem; color: var(--secondary-color); font-weight: 700;" id="visited-count">0</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 1rem;">🗺️</div>
+          <h3>Planned Trips</h3>
+          <p style="font-size: 2rem; color: var(--primary-color); font-weight: 700;" id="planned-count">0</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>TravelNest</h3>
+        <p>Making travel planning easy, enjoyable, and stress-free for everyone.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="budget-planner.html">Budget Planner</a></li>
+          <li><a href="feedback.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <p>Subscribe to get travel tips and destination updates!</p>
+        <div class="newsletter-form">
+          <input type="email" id="newsletter-email" placeholder="Your email" required>
+          <button class="btn btn-primary" onclick="subscribeNewsletter()">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 TravelNest. All rights reserved. | Made with ❤️ for travelers</p>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/travel-mood.js"></script>
+</body>
+</html>
